@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Slippers</title>
   </head>
   <body>
-    @@include('html/header.html',{})
+    @@include('html/header.html',{}) @@include('html/intro.html', {})
+    @@include('html/catalog.html', {})
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./files/scripts/scripts.js" type="module" async></script>
   </body>
 </html>

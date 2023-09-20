@@ -64,8 +64,6 @@ const copy = (done) => {
 const scripts = () => {
   return gulp
     .src("src/files/scripts/scripts.js")
-    .pipe(terser())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/files/scripts"))
     .pipe(sync.stream());
 };
@@ -127,7 +125,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  gulp.parallel(html, styles, copyImages),
+  gulp.parallel(html, styles, copyImages, scripts),
   server,
   watcher
 );

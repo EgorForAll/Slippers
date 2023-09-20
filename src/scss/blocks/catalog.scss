@@ -1,0 +1,162 @@
+.catalog {
+  width: 100%;
+  position: relative;
+  background-color: #f0f0f0;
+  padding-bottom: 50px;
+}
+
+.catalog__container {
+  margin: 0 15px;
+}
+
+.catalog__header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-family: $GothamPro;
+  font-size: 12px;
+  align-items: flex-end;
+}
+
+.catalog__title {
+  font-family: $GothamProBold;
+  font-size: 19px;
+  color: #2c2b31;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.swiper-slide-thumb-active {
+  opacity: 0.5;
+}
+
+.swiper-thumbs {
+  margin-top: 20px;
+}
+
+.swiper-slide {
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mySwiper2 {
+  width: 358px;
+  height: 232[x];
+}
+
+.catalog__description {
+  list-style-type: none;
+  padding: 0;
+}
+
+.catalog__description-text {
+  position: relative;
+  font-size: 15px;
+  font-family: $GothamPro;
+  strong {
+    font-family: $GothamProBold;
+  }
+  &:before {
+    position: absolute;
+    top: -1px;
+    right: -20px;
+    width: 15px;
+    height: 12px;
+    content: "";
+    background-image: url("../files/img/header-flag.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.catalog__description-item {
+  margin-bottom: 10px;
+  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stars {
+  margin-right: 10px;
+  transform: translateY(1px);
+  font-family: $GothamPro;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.catalog__options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__option {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+
+  span {
+    font-family: $GothamPro;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #2c2b31;
+  }
+}
+
+select {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border: none;
+  display: flex;
+  border-radius: 10px;
+  text-align: center;
+  font-family: $GothamProBold;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: url("../files/img/arrow.svg") no-repeat;
+  background-position: calc(100% - 0.75rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+  background-color: #fff !important;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100px;
+    height: 10px;
+    content: "color";
+    font-family: $GothamPro;
+    text-transform: lowercase;
+  }
+}
+
+.catalog__button {
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-family: $GothamProBold;
+  background-color: #37d997;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: #237d59;
+  }
+}
