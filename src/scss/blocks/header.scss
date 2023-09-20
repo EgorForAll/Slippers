@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+}
+
+.header__container {
+  margin: 10px 15px;
+  display: flex;
+}
+
+.header__text {
+  position: relative;
+  margin: 0 auto;
+  font-size: 13px;
+  font-family: $GothamPro;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    content: "";
+    background-image: url("../files/img/header-flag.svg") no-repeat;
+  }
+}

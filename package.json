@@ -1,32 +1,54 @@
 {
-  "name": "adc-tour-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "SET NODE_ENV='production' && webpack",
-    "start": "webpack-dev-server"
-  },
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "type": "commonjs",
   "devDependencies": {
-    "@babel/core": "7.22.10",
-    "@babel/preset-env": "7.22.10",
-    "babel-loader": "9.1.3",
-    "css-loader": "6.8.1",
-    "html-loader": "^4.2.0",
-    "html-webpack-plugin": "^5.5.3",
-    "mini-css-extract-plugin": "2.7.6",
-    "post": "0.0.1",
-    "postcss": "8.4.27",
-    "postcss-loader": "7.3.3",
-    "postcss-preset-env": "9.1.1",
-    "sass": "1.65.1",
-    "sass-loader": "13.3.2",
-    "style-loader": "^3.3.3",
-    "svg-inline-loader": "^0.8.2",
-    "webpack": "5.88.2",
-    "webpack-cli": "5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.3.1",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-libsquoosh": "^1.0.9",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "8.3.6",
+    "postcss-csso": "5.0.1",
+    "sass": "^1.57.1",
+    "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "0.1.10"
+  },
+  "scripts": {
+    "test": "tsc && cross-env NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "lint`": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/files/scripts/**/*.js",
+    "src/files/img/**/*.svg",
+    "src/scss/**/*.scss"
+  ],
+  "engines": {
+    "node": "14.15.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
